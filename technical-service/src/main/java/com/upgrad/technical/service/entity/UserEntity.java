@@ -33,7 +33,7 @@ LAST_LOGIN_AT        TIMESTAMP (Null to make its default value as null)
 //Complete this class on the basis of above table schema
 
 //Write the annotation which defines that a class can be mapped to a Table
-//
+
 @Table(name = "USERS", schema = "imagehoster")
 public class UserEntity implements Serializable {
 
