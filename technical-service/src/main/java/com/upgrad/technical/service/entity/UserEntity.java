@@ -4,9 +4,10 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
-import org.springframework.data.annotation.Id;
+
 
 import javax.persistence.*;
+import javax.persistence.Id;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
@@ -33,7 +34,7 @@ LAST_LOGIN_AT        TIMESTAMP (Null to make its default value as null)
 //Complete this class on the basis of above table schema
 
 //Write the annotation which defines that a class can be mapped to a Table
-
+@Entity
 @Table(name = "USERS", schema = "imagehoster")
 public class UserEntity implements Serializable {
 
@@ -43,10 +44,11 @@ public class UserEntity implements Serializable {
     //This annotation has 4 attributes name, length, nullable and unique
     //In name attribute you can explicitly specify the name of the column
     //Here the name "ID" is explicitly specified
+
+    //Write an annotation which is used to generate a primary key and choose the generation strategy as GenerationType.IDENTITY
     @Id
     @Column(name = "ID")
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    //Write an annotation which is used to generate a primary key and choose the generation strategy as GenerationType.IDENTITY
     private long id;
 
 
