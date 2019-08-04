@@ -1,0 +1,6 @@
+com\upgrad\technical\api\model\SignupUserResponse.class
+io\swagger\api\ApiOriginFilter.class
+io\swagger\api\NotFoundException.class
+io\swagger\RFC3339DateFormat.class
+io\swagger\api\ApiException.class
+io\swagger\configuration\SwaggerDocumentationConfig.class
