@@ -12,11 +12,16 @@ public class SignupBusinessService {
 
     @Autowired
     private UserDao userDao;
+    @Autowired
+    private PasswordCryptographyProvider cryptographyProvider;
 
     @Transactional(propagation = Propagation.REQUIRED)
     //This method receives the UserEntity type object and calls createUser() method in UserDao class.
     //This method returns the UserEntity type object which has been stored in a database.
     public UserEntity signup(UserEntity userEntity) {
+        String [] encryptedText = cryptographyProvider.encrypt(userEntity.getPassword());
+        userEntity.setSalt(encryptedText[0]);
+        userEntity.setPassword(encryptedText[1]);
         return userDao.createUser(userEntity);
     }
 }
