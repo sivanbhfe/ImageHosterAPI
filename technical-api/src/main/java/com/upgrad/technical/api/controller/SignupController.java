@@ -24,7 +24,7 @@ public class SignupController {
     @Autowired
     private SignupBusinessService signupBusinessService;
 
-
+    //Basic signup function
     //This method is for user signup
     //This method receives the object of SignupUserRequest type with its attributes being set.
     //This method is listening for a HTTP POST request as indicated by method= RequestMethod.POST , maps to a URL request of type '/usersignup' and consumes and produces Json.
