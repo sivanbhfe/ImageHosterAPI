@@ -15,6 +15,8 @@ import java.util.Random;
 /**
  * PasswordCryptographyProvider implements OWASP recommendation password security - Salt and SHA512.
  */
+//Standard procedure for password encrption followed from previous project
+    
 @Component
 public class PasswordCryptographyProvider {
 
